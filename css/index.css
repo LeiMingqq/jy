@@ -3,9 +3,10 @@ body {
   font: 14px/1.5 "Microsoft YaHei", Tahoma, "simsun", sans-serif;
   color: #323235;
   min-width: 1280px;
-  background: url(../img/bg-2.jpg);
+  background: url("../img/142合照.jpg");
   background-position: center top;
   background-repeat: no-repeat;
+  background-size: 100%
 }
 
 /* 通用样式 */
@@ -47,8 +48,8 @@ body {
 
 .header {
   height: 84px;
-  background: rgba(0, 0, 0, 0.8);
-  color: #c9c9dd;
+  background: #467b72cc;
+  color: #000;
 }
 
 .header .dhl-nav {
@@ -56,9 +57,10 @@ body {
 }
 
 .header .dhl-nav .logo a {
-  width: 200px;
-  height: 54px;
-  background: url(../img/logo.png);
+  width: 290px;
+  height: 56px;
+  background: url(../img/logo.png) no-repeat;
+  background-size: 290px;
   display: block;
   margin-top: 16px;
   text-indent: -100px;
@@ -148,6 +150,7 @@ body {
   height: 240px;
   margin: 0 auto;
   padding: 15px 0 30px 463px;
+  margin-left: -100px
 }
 
 .header .erdhl-nva ul li {

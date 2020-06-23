@@ -6,11 +6,11 @@ var wxDenglu = document.querySelector(".wx-denglu");
 // 查找点击后关闭的按钮
 var wxX = document.querySelector(".wx-x");
 
-Sign.onclick = function () {
-    // 点击之后，运行这里的代码
-    wxDenglu.style.display = "block";
-    // 显示
-}
+// Sign.onclick = function () {
+//     // 点击之后，运行这里的代码
+//     wxDenglu.style.display = "block";
+//     // 显示
+// }
 
 wxX.onclick = function () {
     wxDenglu.style.display = "none";
