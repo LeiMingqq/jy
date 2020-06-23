@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D立体相册</title>
+    <style>
+        body{
+            /* 屏幕离我们的距离 */
+            perspective: 2000px;
+            background-color: #1f2022;
+        }
+        .container{
+            width: 200px;
+            height: 200px;
+            margin: 300px auto 0;
+            /* 相对定位 */
+            position: relative;
+            /* 设置子元素为3d效果展示 */
+            transform-style: preserve-3d;
+            /* 设置成动画效果 */
+            animation: leiming 10s linear infinite;
+        }
+        .min-box,.max-box{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* 相互低效 达到原地转的效果 */
+            /* 设置子元素为3d效果展示 */
+            transform-style: preserve-3d;
+            width: 200px;
+            height: 200px;
+            /* 元素的过渡效果 */
+            transition: all 2s;
+        }
+
+        /* 设置每张图片的属性 */
+        .item{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            /* 设置相对定位防止图片不对称 */
+            /* 图片不重复 */
+            background-repeat: no-repeat;
+            /* 图片居中对齐 */
+            background-position: center;
+            background-size: 100%;
+            /* 元素的过渡效果 */
+            transition: all 2s;
+            /* 元素的透明程度 */
+            opacity: 0.8;
+        }
+
+        .container:hover .max-box{
+            width: 300px;
+            height: 300px;
+        }
+
+        .item1{
+            background-image: url('./img/1.jpg');
+            transform: translateZ(100px);
+        }
+        .container:hover .max-box .item1{
+            transform: translateZ(300px);
+        }
+        .item2{
+            background-image: url('./img/2.jpg');
+            transform: rotateY(90deg) translateZ(100px);
+        }
+        .container:hover .max-box .item2{
+            transform: rotateY(90deg) translateZ(300px);
+        }
+        .item3{
+            background-image: url('./img/3.jpg');
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+        .container:hover .max-box .item3{
+            transform: rotateY(-90deg) translateZ(300px);
+        }
+        .item4{
+            background-image: url('./img/4.jpg');
+            transform: rotateY(180deg) translateZ(100px);
+        }
+        .container:hover .max-box .item4{
+            transform: rotateY(180deg) translateZ(300px);
+        }
+        .item5{
+            background-image: url('./img/5.jpg');
+            transform: rotateX(90deg) translateZ(100px);
+        }
+        .container:hover .max-box .item5{
+            transform: rotateX(90deg) translateZ(300px);
+        }
+        .item6{
+            background-image: url('./img/6.jpg');
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+        .container:hover .max-box .item6{
+            transform: rotateX(-90deg) translateZ(300px);
+        }
+
+
+        @keyframes leiming{
+            0%{
+                transform: rotateY(0deg);
+            }
+            100%{
+                transform: rotateY(360deg);
+            }
+        }
+
+        /* 隐藏音频标签 */
+        audio{
+            display: none;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="min-box">
+            <div class="item item1"></div>
+            <div class="item item2"></div>
+            <div class="item item3"></div>
+            <div class="item item4"></div>
+            <div class="item item5"></div>
+            <div class="item item6"></div>
+        </div>
+        <div class="max-box">
+            <div class="item item1" title="自强不息"></div>
+            <div class="item item2"></div>
+            <div class="item item3"></div>
+            <div class="item item4"></div>
+            <div class="item item5"></div>
+            <div class="item item6"></div>
+        </div>
+    </div>
+
+    <audio controls autoplay>
+        <source src="mp3/闪耀.mp3">
+    </audio>
+
+
+    <script>
+
+        var audio = document.getElementsByTagName("audio")[0];
+
+        
+        window.onclick = function() {
+            if(audio.paused) {
+                audio.play();
+                console.log(audio.play);
+                alert("正在播放音乐")
+            }
+            //  else {
+            //     audio.pause();
+            //     console.log(2);
+            // }
+        }
+
+    </script>
+    
+    
+</body>
+</html>

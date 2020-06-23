@@ -12,10 +12,10 @@ var wxX = document.querySelector(".wx-x");
 //     // 显示
 // }
 
-// wxX.onclick = function () {
-//     wxDenglu.style.display = "none";
-//     // 关闭
-// }
+wxX.onclick = function () {
+    wxDenglu.style.display = "none";
+    // 关闭
+}
 
 // 有一个机器人: switchImage
 // 只要告诉他切换到第几张图片，它就会自动的去完成切换

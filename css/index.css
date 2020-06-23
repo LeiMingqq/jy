@@ -195,7 +195,22 @@ body {
 .bodyer .bodyer-right {
   float: right;
   width: 236px;
-  height: 100%;
+  height: 342px;
+  background: url(../img/老班.jpg) no-repeat;
+  background-size: 100%;
+  background-position: center;
+  background-color: #323235;
+  position: relative;
+}
+.bodyer .bodyer-right::after{
+  content: "形象代言人-徐子强";
+  color: white;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
 }
 
 .bodyer .download {
@@ -226,6 +241,11 @@ body {
   height: 298px;
   display: flex;
   overflow: hidden;
+  opacity: 0.7;
+  transition: 1s;
+}
+.bodyer:hover .bodyer-left .bodyer-img{
+  opacity: 1;
 }
 
 .bodyer .bodyer-left .bodyer-img img {
@@ -351,8 +371,9 @@ body {
 
 .guanggao {
   margin: 28px auto 34px;
-  height: 134px;
+  height: 200px;
   display: flex;
+  position: relative;
 }
 
 .guanggao .guanggao-img {
@@ -366,6 +387,35 @@ body {
 
 .guanggao .guanggao-img img {
   transition: 0.3s;
+}
+.guanggao .guanggao-img a img {
+  width: 291px;
+}
+.guanggao .guanggao-img a h2{
+  position: absolute;
+  color: #ff9b35;
+  font-size: 20px;
+  font-weight: bold;
+  left: 0;
+  bottom: -30px;
+  background-color: #727272;
+  width: 291px;
+  text-align: center;
+}
+.guanggao .guanggao-img a h2::after{
+  content: "-雷明";
+  position: absolute;
+  display: inline-block;
+  font-size: 16px;
+  color: yellow;
+  transform: translateX(80px);
+  transition: all 1s;
+  opacity: 0;
+  top: 2px;
+}
+.guanggao .guanggao-img a:hover h2::after{
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .guanggao .guanggao-img img:hover {
@@ -433,6 +483,7 @@ body {
   top: -100px;
   right: 0;
 }
+
 .footer .footer-yuej .yuei-right ul li {
   line-height: 20px;
 }
@@ -514,11 +565,12 @@ body {
 }
 .daji-nav .daji-beyeb {
   position: absolute;
-  top: 15px;
-  left: 24px;
+  top: 44px;
+  left: 64px;
   width: 165px;
   height: 145px;
-  background: url(../img/r_dj.png);
+  background: url(../img/小图标.png);
+  background-size: 100%;
 }
 .daji-nav .daji-beyeb p {
   width: 88px;
