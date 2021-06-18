@@ -1,9 +1,11 @@
+/* 导入重置文件 */
+@import url("./reset.css");
 body {
   background: #fff;
   font: 14px/1.5 "Microsoft YaHei", Tahoma, "simsun", sans-serif;
   color: #323235;
   min-width: 1280px;
-  background: url("../img/142合照.jpg");
+  /* background: url("../img/142合照.jpg"); */
   background-position: center top;
   background-repeat: no-repeat;
   background-size: 100%
